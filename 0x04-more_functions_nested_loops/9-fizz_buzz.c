@@ -1,26 +1,29 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * print_square - print a #
- * @size: says how many # this function is going to print
- * Return: the respective cantity of #
+ * main - Fizz Buzz.
+ *
+ * Return: Always 0.
  */
-void print_square(int size)
+int main(void)
 {
-	int i, j;
+int i;
 
-	if (!(size <= 0))
-	{
-		for (i = 1; i <= size; i++)
-		{
-			for (j = 1; j <= size; j++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
-		}
-	}
-	else
-	{
-		_putchar('\n');
-	}
+for (i = 1; i <= 100; i++)
+{
+if (((i % 3) == 0) && ((i % 5) != 0))
+printf("Fizz");
+else if (((i % 5) == 0) && ((i % 3) != 0))
+printf("Buzz");
+else if (((i % 5) == 0) && ((i % 3) == 0))
+printf("FizzBuzz");
+else
+printf("%d", i);
+if (!(i == 100))
+{
+printf(" ");
+}
+}
+printf("\n");
+return (0);
 }
